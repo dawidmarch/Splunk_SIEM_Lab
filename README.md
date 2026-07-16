@@ -22,3 +22,11 @@ Proces wdrożenia wymagał precyzyjnej konfiguracji rurociągu danych (data pipe
 ### Konfiguracja połączenia
 * **Splunk Receiver:** Skonfigurowano port `9997` na serwerze Linux (`192.168.0.105`) jako główny punkt wejścia dla logów z agentów.
 * **Universal Forwarder:** Wdrożono konfigurację `outputs.conf` oraz `inputs.conf` na hoście Windows (`192.168.0.110`), wskazując serwer indeksujący jako cel przesyłu danych.
+
+**Konfiguracja `outputs.conf` na Windows:**
+```ini
+[tcpout]
+defaultGroup = default-autolb-group
+
+[tcpout:default-autolb-group]
+server = 192.168.0.105:9997
