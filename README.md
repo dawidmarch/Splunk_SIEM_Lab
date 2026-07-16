@@ -42,3 +42,15 @@ Aby potwierdzić poprawność działania "rury" (pipeline), wykonano test przesy
 ```powershell
 .\splunk add oneshot "C:\Windows\System32\drivers\etc\hosts" -index main -sourcetype test_data
 ```
+
+## 3. Analiza Operacyjna
+
+Dashboard w systemie Splunk został przygotowany do wyświetlania zdarzeń pochodzących z agenta Windows. Dzięki poprawnemu zaindeksowaniu danych w `index=main`, możliwe jest teraz prowadzenie działań typu "Threat Hunting" oraz analiza logów systemowych (`WinEventLog`).
+
+[Image of Splunk dashboard interface for security monitoring]
+
+## 4. Przyszły rozwój
+
+* **Automatyzacja:** Wdrożenie automatycznego wykrywania incydentów przy użyciu reguł korelacyjnych.
+* **Threat Hunting:** Konfiguracja zapytań SPL (Splunk Processing Language) wykrywających techniki **MITRE ATT&CK**.
+* **Skalowanie:** Dodanie kolejnych agentów oraz integracja z zewnętrznymi bazami threat intelligence.
