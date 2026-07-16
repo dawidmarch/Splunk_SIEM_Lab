@@ -30,3 +30,5 @@ defaultGroup = default-autolb-group
 
 [tcpout:default-autolb-group]
 server = 192.168.0.105:9997
+```
+Rozwiązywanie problemów: Kluczowym etapem była diagnostyka sieciowa, polegająca na otwarciu portu 9997 w systemie Linux (zarządzanie regułami iptables oraz nftables) oraz rozwiązaniu problemów z uprawnieniami w systemie Windows. w .md
