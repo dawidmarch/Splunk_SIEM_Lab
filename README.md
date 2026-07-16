@@ -14,3 +14,5 @@ Projekt prezentuje proces wdrożenia i konfiguracji systemu SIEM w oparciu o roz
 * **Splunk Indexer (Serwer):** Kali Linux – `192.168.0.105` (Główna instancja Splunk Enterprise odbierająca logi na porcie 9997).
 * **Endpoint (Ofiara):** Windows 10 Pro – `192.168.0.110` (Zainstalowany Splunk Universal Forwarder).
 * **System Atakującego:** Kali Linux – `192.168.0.107` (Platforma przygotowana do generowania ruchu symulującego ataki).
+
+## 1. Implementacja techniczna
