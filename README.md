@@ -21,8 +21,12 @@ Proces wdrożenia wymagał precyzyjnej konfiguracji rurociągu danych (data pipe
 
 ### Konfiguracja połączenia
 
+<img width="1109" height="889" alt="3" src="https://github.com/user-attachments/assets/ba476b8d-bc87-41ac-a41e-4561ddab8a04" />
 
 * **Splunk Receiver:** Skonfigurowano port `9997` na serwerze Linux (`192.168.0.105`) jako główny punkt wejścia dla logów z agentów.
+
+<img width="681" height="473" alt="4" src="https://github.com/user-attachments/assets/d3c41795-d00e-4a6e-b440-7a14dd693ed8" />
+
 * **Universal Forwarder:** Wdrożono konfigurację `outputs.conf` oraz `inputs.conf` na hoście Windows (`192.168.0.110`), wskazując serwer indeksujący jako cel przesyłu danych.
 
 **Konfiguracja `outputs.conf` na Windows:**
@@ -33,7 +37,12 @@ defaultGroup = default-autolb-group
 [tcpout:default-autolb-group]
 server = 192.168.0.105:9997
 ```
+
+<img width="715" height="433" alt="5" src="https://github.com/user-attachments/assets/3060aa5d-55a8-4ebd-92d0-39001290e6a8" />
+
 Rozwiązywanie problemów: Kluczowym etapem była diagnostyka sieciowa, polegająca na otwarciu portu 9997 w systemie Linux (zarządzanie regułami iptables oraz nftables) oraz rozwiązaniu problemów z uprawnieniami w systemie Windows. w .md
+
+
 
 ## 2. Weryfikacja przepływu danych (Test "Oneshot")
 
@@ -49,7 +58,7 @@ Aby potwierdzić poprawność działania "rury" (pipeline), wykonano test przesy
 
 Dashboard w systemie Splunk został przygotowany do wyświetlania zdarzeń pochodzących z agenta Windows. Dzięki poprawnemu zaindeksowaniu danych w `index=main`, możliwe jest teraz prowadzenie działań typu "Threat Hunting" oraz analiza logów systemowych (`WinEventLog`).
 
-[Image of Splunk dashboard interface for security monitoring]
+<img width="1903" height="807" alt="6" src="https://github.com/user-attachments/assets/255f221b-b7f8-410e-a2f1-089ea14d8b0c" />
 
 ## 4. Przyszły rozwój
 
