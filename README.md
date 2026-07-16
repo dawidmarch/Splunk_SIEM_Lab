@@ -16,3 +16,9 @@ Projekt prezentuje proces wdrożenia i konfiguracji systemu SIEM w oparciu o roz
 * **System Atakującego:** Kali Linux – `192.168.0.107` (Platforma przygotowana do generowania ruchu symulującego ataki).
 
 ## 1. Implementacja techniczna
+
+Proces wdrożenia wymagał precyzyjnej konfiguracji rurociągu danych (data pipeline) oraz wyeliminowania przeszkód sieciowych.
+
+### Konfiguracja połączenia
+* **Splunk Receiver:** Skonfigurowano port `9997` na serwerze Linux (`192.168.0.105`) jako główny punkt wejścia dla logów z agentów.
+* **Universal Forwarder:** Wdrożono konfigurację `outputs.conf` oraz `inputs.conf` na hoście Windows (`192.168.0.110`), wskazując serwer indeksujący jako cel przesyłu danych.
