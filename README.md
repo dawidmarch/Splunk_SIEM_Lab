@@ -32,3 +32,13 @@ defaultGroup = default-autolb-group
 server = 192.168.0.105:9997
 ```
 Rozwiązywanie problemów: Kluczowym etapem była diagnostyka sieciowa, polegająca na otwarciu portu 9997 w systemie Linux (zarządzanie regułami iptables oraz nftables) oraz rozwiązaniu problemów z uprawnieniami w systemie Windows. w .md
+
+## 2. Weryfikacja przepływu danych (Test "Oneshot")
+
+Aby potwierdzić poprawność działania "rury" (pipeline), wykonano test przesyłu pliku testowego `hosts` z systemu Windows do Splunka za pomocą komendy `.\splunk add oneshot`. Pozytywny wynik testu (`Added the following monitor...`) potwierdził drożność komunikacji między stacją roboczą a serwerem SIEM.
+
+**Komenda weryfikacyjna:**
+
+```powershell
+.\splunk add oneshot "C:\Windows\System32\drivers\etc\hosts" -index main -sourcetype test_data
+```
