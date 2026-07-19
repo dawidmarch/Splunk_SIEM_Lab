@@ -51,4 +51,4 @@ Do dashboardu SOC (w celu monitoringu w czasie rzeczywistym) rekomenduje siÄ™ uÅ
 
 ```splunk
 index=* "certutil.exe" EventCode=5156
-| table _time, ComputerName, Process_Name, DestinationIp, DestinationPort, CommandLine
+| table _time, ComputerName, Process_Name, DestinationIp, DestinationPort
