@@ -12,3 +12,6 @@ Celem projektu jest wdrożenie procedury detekcyjnej dla techniki **Ingress Tool
 *Wyjaśnienie:* Napastnik wykorzystuje `certutil.exe` do pobrania pliku z zewnętrznego serwera, co jest klasyczną techniką mającą na celu uniknięcie detekcji przez sygnaturowe rozwiązania AV/EDR, które ufają podpisanym cyfrowo narzędziom Microsoftu.
 
 ## 3. Metodologia ataku
+
+### Przygotowanie infrastruktury (Kali Linux)
+Na maszynie atakującej wygenerowano payload przy użyciu `msfvenom` oraz uruchomiono serwer HTTP, aby wystawić plik w sieci lokalnej.
