@@ -10,3 +10,5 @@ Celem projektu jest wdrożenie procedury detekcyjnej dla techniki **Ingress Tool
 | Command and Control | Ingress Tool Transfer | T1105 |
 
 *Wyjaśnienie:* Napastnik wykorzystuje `certutil.exe` do pobrania pliku z zewnętrznego serwera, co jest klasyczną techniką mającą na celu uniknięcie detekcji przez sygnaturowe rozwiązania AV/EDR, które ufają podpisanym cyfrowo narzędziom Microsoftu.
+
+## 3. Metodologia ataku
