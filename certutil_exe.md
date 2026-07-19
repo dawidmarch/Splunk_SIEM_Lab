@@ -30,3 +30,6 @@ Wykonanie ataku przy użyciu `certutil.exe`. Widoczne zakończenie sukcesem oraz
 ## 4. Analiza logów (Splunk SIEM)
 W celu detekcji ataku, przeprowadzono analizę logów w systemie Splunk. Zidentyfikowano zdarzenie `EventCode 5156` (Windows Filtering Platform Connection), które jest kluczowym wskaźnikiem (IOC) dla ruchu sieciowego generowanego przez ten proces.
 
+<img width="843" height="573" alt="3" src="https://github.com/user-attachments/assets/566294a9-d965-4d58-9efd-e0fb0db9b34e" />
+
+Log w Splunku wskazujący na połączenie sieciowe wychodzące z procesu `certutil.exe` (PID: 5636) do serwera zewnętrznego (192.168.0.107).*
