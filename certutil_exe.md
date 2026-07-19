@@ -26,3 +26,7 @@ Na stacji roboczej Windows 10 wykorzystano narzędzie `certutil.exe` do pobrania
 <img width="855" height="687" alt="1" src="https://github.com/user-attachments/assets/5b1ad00c-9627-487a-85ca-1550b73ca004" />
 
 Wykonanie ataku przy użyciu `certutil.exe`. Widoczne zakończenie sukcesem oraz ścieżka zapisu pliku `C:\Temp\payload.exe`.*
+
+## 4. Analiza logów (Splunk SIEM)
+W celu detekcji ataku, przeprowadzono analizę logów w systemie Splunk. Zidentyfikowano zdarzenie `EventCode 5156` (Windows Filtering Platform Connection), które jest kluczowym wskaźnikiem (IOC) dla ruchu sieciowego generowanego przez ten proces.
+
