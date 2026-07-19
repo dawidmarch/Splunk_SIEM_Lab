@@ -46,11 +46,9 @@ Analiza potwierdziła, że `certutil.exe` stanowi wektor dla techniki *Ingress T
 
 ## 6. Rekomendacja (Wizualizacja i Detekcja)
 
-### Zapytanie SPL (Search Processing Language)
+### Zapytanie SPL 
 Do dashboardu SOC (w celu monitoringu w czasie rzeczywistym) rekomenduje się użycie poniższego zapytania, które wyszukuje połączenia sieciowe zainicjowane przez `certutil.exe`:
 
 ```splunk
 index=* "certutil.exe" EventCode=5156
-| table _time, ComputerName, Process_Name, DestinationIp, DestinationPort
-| rename Process_Name as "Podejrzany Proces", DestinationIp as "Adres Docelowy"
-| sort - _time
+| table _time, ComputerName, Process_Name, DestinationIp, DestinationPort, CommandLine
