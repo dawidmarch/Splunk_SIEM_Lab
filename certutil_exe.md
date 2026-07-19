@@ -43,3 +43,14 @@ Log w Splunku wskazujący na połączenie sieciowe wychodzące z procesu `certut
 Analiza potwierdziła, że `certutil.exe` stanowi wektor dla techniki *Ingress Tool Transfer*. Dzięki monitorowaniu logów `EventCode 5156` możliwe było zidentyfikowanie połączenia wychodzącego. Wykorzystanie PID (`5636`) pozwoliło na wyizolowanie pełnej aktywności procesu w systemie.
 
 **Perspektywa analityka SOC:** W dojrzałych środowiskach należy dążyć do korelacji powyższego logu z procesem uruchomienia (Event ID 4688 lub Sysmon ID 1), co pozwoliłoby na odczytanie pełnej komendy (`CommandLine`), zawierającej pobierany plik oraz adres URL.
+
+## 6. Rekomendacja (Wizualizacja i Detekcja)
+
+### Zapytanie SPL (Search Processing Language)
+Do dashboardu SOC (w celu monitoringu w czasie rzeczywistym) rekomenduje się użycie poniższego zapytania, które wyszukuje połączenia sieciowe zainicjowane przez `certutil.exe`:
+
+```splunk
+index=* "certutil.exe" EventCode=5156
+| table _time, ComputerName, Process_Name, DestinationIp, DestinationPort
+| rename Process_Name as "Podejrzany Proces", DestinationIp as "Adres Docelowy"
+| sort - _time
