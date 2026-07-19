@@ -16,6 +16,9 @@ Celem projektu jest wdrożenie procedury detekcyjnej dla techniki **Ingress Tool
 ### Przygotowanie infrastruktury (Kali Linux)
 Na maszynie atakującej wygenerowano payload przy użyciu `msfvenom` oraz uruchomiono serwer HTTP, aby wystawić plik w sieci lokalnej.
 
-<img width="855" height="687" alt="1" src="https://github.com/user-attachments/assets/0d72909f-60a1-4e86-975a-34212a4cdfda" />
+<img width="683" height="623" alt="2" src="https://github.com/user-attachments/assets/8c2d434a-486b-4264-a7ba-93c95168af56" />
 
 Przygotowanie payloadu (`msfvenom`) oraz uruchomienie serwera HTTP (Python).*
+
+### Egzekucja ataku (Windows 10)
+Na stacji roboczej Windows 10 wykorzystano narzędzie `certutil.exe` do pobrania złośliwego pliku z serwera Kali. Jest to działanie, które w środowisku produkcyjnym często pozostaje niezauważone, jeśli nie monitoruje się aktywności sieciowej procesów.
