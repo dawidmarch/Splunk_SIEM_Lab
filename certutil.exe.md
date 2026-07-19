@@ -1,1 +1,0 @@
-# Case Study: Certutil.exe
