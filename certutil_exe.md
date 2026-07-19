@@ -22,3 +22,7 @@ Przygotowanie payloadu (`msfvenom`) oraz uruchomienie serwera HTTP (Python).*
 
 ### Egzekucja ataku (Windows 10)
 Na stacji roboczej Windows 10 wykorzystano narzędzie `certutil.exe` do pobrania złośliwego pliku z serwera Kali. Jest to działanie, które w środowisku produkcyjnym często pozostaje niezauważone, jeśli nie monitoruje się aktywności sieciowej procesów.
+
+<img width="855" height="687" alt="1" src="https://github.com/user-attachments/assets/5b1ad00c-9627-487a-85ca-1550b73ca004" />
+
+Wykonanie ataku przy użyciu `certutil.exe`. Widoczne zakończenie sukcesem oraz ścieżka zapisu pliku `C:\Temp\payload.exe`.*
