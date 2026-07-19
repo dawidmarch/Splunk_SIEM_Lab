@@ -15,3 +15,7 @@ Celem projektu jest wdrożenie procedury detekcyjnej dla techniki **Ingress Tool
 
 ### Przygotowanie infrastruktury (Kali Linux)
 Na maszynie atakującej wygenerowano payload przy użyciu `msfvenom` oraz uruchomiono serwer HTTP, aby wystawić plik w sieci lokalnej.
+
+<img width="855" height="687" alt="1" src="https://github.com/user-attachments/assets/0d72909f-60a1-4e86-975a-34212a4cdfda" />
+
+Przygotowanie payloadu (`msfvenom`) oraz uruchomienie serwera HTTP (Python).*
