@@ -38,3 +38,6 @@ Log w Splunku wskazujący na połączenie sieciowe wychodzące z procesu `certut
 *   **Process Name:** `\device\harddiskvolume2\windows\system32\certutil.exe`
 *   **PID:** `5636`
 *   **Destination IP:** `192.168.0.107`
+
+## 5. Wnioski techniczne
+Analiza potwierdziła, że `certutil.exe` stanowi wektor dla techniki *Ingress Tool Transfer*. Dzięki monitorowaniu logów `EventCode 5156` możliwe było zidentyfikowanie połączenia wychodzącego. Wykorzystanie PID (`5636`) pozwoliło na wyizolowanie pełnej aktywności procesu w systemie.
