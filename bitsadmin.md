@@ -40,3 +40,11 @@ Aktywność została zarejestrowana w logach Windows Security. Analiza potwierdz
 **Zapytanie wyszukujące (SPL):**
 ```splunk
 index=main EventCode=4688 "bitsadmin.exe"
+```
+## 5. Wnioski techniczne
+
+Analiza wykazała, że standardowy log audytu procesu (**4688**) jest wystarczający do wykrycia wykonania LOLBins, o ile w polityce lokalnej/grupowej Windows włączono audyt tworzenia procesów ("Audit Process Creation").
+
+Wykorzystanie `bitsadmin` w taki sposób stanowi wyraźną anomalię. W środowisku korporacyjnym transfery BITS powinny być inicjowane wyłącznie przez zaufane procesy systemowe (np. `svchost.exe`). Każde bezpośrednie wywołanie tego narzędzia przez użytkownika lub proces użytkownika powinno być traktowane jako podejrzane.
+
+
