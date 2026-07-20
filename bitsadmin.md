@@ -10,3 +10,6 @@ Wykrycie wykorzystania natywnego narzędzia systemowego `bitsadmin.exe` do trans
 | Command and Control | Ingress Tool Transfer | T1105 |
 
 *Wyjaśnienie:* `bitsadmin.exe` jest natywnym narzędziem Windowsa używanym do zarządzania transferami plików. Atakujący wykorzystują je do pobierania payloadu, co pozwala na ominięcie detekcji opartych na aktywności przeglądarek.
+
+## 3. Metodologia ataku
+### Krok 1: Przygotowanie środowiska (C2)
