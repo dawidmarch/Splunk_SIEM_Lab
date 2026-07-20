@@ -30,3 +30,9 @@ Potwierdzono dostępność pliku przez protokół HTTP z maszyny docelowej.
 <img width="1011" height="605" alt="3" src="https://github.com/user-attachments/assets/d28fb01d-3588-49c5-b5d9-c21faca7edfb" />
 
 Uruchomiono `bitsadmin` z uprawnieniami administratora w celu pobrania pliku do katalogu publicznego.
+
+## 4. Analiza logów (Splunk)
+
+<img width="903" height="633" alt="4" src="https://github.com/user-attachments/assets/a69156b0-6b01-4720-a9dc-a3f63b2fe671" />
+
+Aktywność została zarejestrowana w logach Windows Security. Analiza potwierdziła wykonanie procesu `bitsadmin.exe` z odpowiednimi parametrami w linii poleceń.
