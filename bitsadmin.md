@@ -36,3 +36,7 @@ Uruchomiono `bitsadmin` z uprawnieniami administratora w celu pobrania pliku do 
 <img width="903" height="633" alt="4" src="https://github.com/user-attachments/assets/a69156b0-6b01-4720-a9dc-a3f63b2fe671" />
 
 Aktywność została zarejestrowana w logach Windows Security. Analiza potwierdziła wykonanie procesu `bitsadmin.exe` z odpowiednimi parametrami w linii poleceń.
+
+**Zapytanie wyszukujące (SPL):**
+```splunk
+index=main EventCode=4688 "bitsadmin.exe"
