@@ -15,3 +15,5 @@ Wykrycie wykorzystania natywnego narzędzia systemowego `bitsadmin.exe` do trans
 ### Krok 1: Przygotowanie środowiska (C2)
 - Uruchomiono serwer HTTP na maszynie atakującej (Kali Linux) w celu serwowania pliku testowego.
 - Komenda: `python3 -m http.server 80`
+
+### Krok 2: Wykonanie ataku (Windows 10)
