@@ -24,3 +24,7 @@ Wykrycie wykorzystania natywnego narzędzia systemowego `bitsadmin.exe` do trans
 <img width="533" height="367" alt="2" src="https://github.com/user-attachments/assets/88e0e93e-28ef-4d0d-9d2e-177e598740d3" />
 
 Potwierdzono dostępność pliku przez protokół HTTP z maszyny docelowej.
+
+### Krok 3: Wykonanie ataku (Windows 10)
+
+<img width="1011" height="605" alt="3" src="https://github.com/user-attachments/assets/d28fb01d-3588-49c5-b5d9-c21faca7edfb" />
