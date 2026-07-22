@@ -21,4 +21,8 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 ## 3. Metodologia ataku 
 
 ### Krok 1: Przygotowanie środowiska atakującego (Kali Linux)
-Na stacji Kali Linux wygenerowano złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiono lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
+
+<img width="665" height="813" alt="2" src="https://github.com/user-attachments/assets/1c81269f-99ca-4507-a2f6-771fdca407b9" />
+
+Na stacji Kali Linux wygenerowałem złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiłe lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
+
