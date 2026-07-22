@@ -19,3 +19,6 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 `mshta.exe` to plik wykonywalny odpowiedzialny za uruchamianie plików `.hta`, które mogą zawierać osadzony kod skryptowy oraz komponenty ActiveX. Ponieważ plik jest natywnie obecny w systemie Windows i podpisany cyfrowo przez Microsoft, analitycy SOC często przeoczają jego nietypowe wywołania sieciowe. Przestępcy chętnie wykorzystują go do pobierania payloadów Stage-2 w pamięci (Memory-only execution), co utrudnia detekcję opartą na plikach dyskowych.
 
 ## 3. Metodologia ataku 
+
+### Krok 1: Przygotowanie środowiska atakującego (Kali Linux)
+Na stacji Kali Linux wygenerowano złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiono lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
