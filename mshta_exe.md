@@ -3,9 +3,9 @@
 ## 1. Cel projektu
 Celem tego projektu laboratoryjnego jest przeprowadzenie, zarejestrowanie oraz wykrycie zaawansowanego ataku typu **Living off the Land (LotL)** z wykorzystaniem natywnego, podpisanego cyfrowo narzędzia systemowego Windows – **`mshta.exe`** (Microsoft HTML Application Host).
 
-Atak polega na zdalnym pobraniu i wykonaniu złośliwego skryptu HTA (HTML Application) z serwera atakującego (Kali Linux), co pozwala na ominięcie podstawowych mechanizmów kontroli aplikacji oraz ukrycie złośliwej aktywności pod płaszczykiem legalnego procesu systemowego.
+Atak polega na zdalnym pobraniu i wykonaniu złośliwego skryptu HTA z serwera atakującego (Kali Linux), co pozwala na ominięcie podstawowych mechanizmów kontroli aplikacji oraz ukrycie złośliwej aktywności pod płaszczykiem legalnego procesu systemowego.
 
-W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Windows 10, przesłano logi do **Splunk Enterprise** za pomocą **Splunk Universal Forwarder**, przeprowadzono symulację ataku oraz zaprojektowano zapytanie SPL do detekcji zagrożenia.
+W ramach projektu skonfigurowałem odpowiednią telemetrię na stacji roboczej Windows 10, przesłałem logi do **Splunk Enterprise** za pomocą **Splunk Universal Forwarder**, przeprowadziłem symulację ataku oraz zaprojektowałem zapytanie SPL do detekcji zagrożenia.
 
 ## 2. MITRE ATT&CK Mapowanie
 
@@ -24,13 +24,13 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 
 <img width="665" height="813" alt="2" src="https://github.com/user-attachments/assets/1c81269f-99ca-4507-a2f6-771fdca407b9" />
 
-Na stacji Kali Linux wygenerowałem złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiłe lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
+Na stacji Kali Linux wygenerowałem złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiłem lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
 
 ### Krok 2: Konfiguracja nasłuchu
 
 <img width="669" height="539" alt="1" src="https://github.com/user-attachments/assets/e29447ea-0f48-4b52-b5c8-6e89705d72ef" />
 
-Skonfigurowano moduł multi/handler w konsoli Metasploit, aby oczekiwać na połączenie zwrotne od stacji roboczej Windows 10. 
+Skonfigurowałem moduł multi/handler w konsoli Metasploit, aby oczekiwać na połączenie zwrotne od stacji roboczej Windows 10. 
 
 Komendy Kali: 
 ```
