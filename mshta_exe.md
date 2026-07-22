@@ -69,6 +69,6 @@ Przykładowe zapytanie SPL (Splunk Processing Language) do detekcji:
  ```source="WinEventLog:Security" EventCode=4688 "mshta.exe" ```
 
 ## 5. Wnioski techniczne 
-*   Analiza anomalii architektonicznych: Użycie mshta.exe do komunikacji z zewnętrznym adresem IP w sieci bez uzasadnienia biznesowego to kluczowy punkt zwrotny w procesie Triage.
-*   Ograniczenia domyślnych mechanizmów: Standardowe systemy AV często ignorują mshta.exe, ponieważ plik jest czysty binarnie (podpisany przez Microsoft). Detekcja musi opierać się na behawioralnej analizie linii komend oraz monitorowaniu połączeń sieciowych.
+*   Analiza anomalii architektonicznych: Użycie ```mshta.exe``` do komunikacji z zewnętrznym adresem IP w sieci bez uzasadnienia biznesowego to kluczowy punkt zwrotny w procesie Triage.
+*   Ograniczenia domyślnych mechanizmów: Standardowe systemy AV często ignorują ```mshta.exe```, ponieważ plik jest czysty binarnie (podpisany przez Microsoft). Detekcja musi opierać się na behawioralnej analizie linii komend oraz monitorowaniu połączeń sieciowych.
 *   Korelacja rodzic-potomek: Detekcja procesów narzędziowych wywołujących powłoki sieciowe przez nieautoryzowane ścieżki pozwala skutecznie wykrywać zagrożenia typu LotL.
