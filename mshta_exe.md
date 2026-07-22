@@ -14,3 +14,6 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 | **TA0005** (Defense Evasion) | **T1218.005** - Signed Binary Proxy Execution: Mshta | Wykorzystanie zaufanego, podpisanego przez Microsoft pliku `mshta.exe` do załadowania i wykonania kodu HTML/VBScript/PowerShell z pominięciem restrykcji. |
 | **TA0002** (Execution) | **T1059.005** - Command and Scripting Interpreter: Visual Basic / JScript | Wykonanie złośliwego payloadu osadzonego wewnątrz struktury HTA za pomocą silnika skryptowego MSHTML. |
 | **TA0011** (Command and Control) | **T1071.001** - Application Layer Protocol: Web Protocols | Nawiązanie połączenia zwrotnego (Reverse Shell) przez HTTP do stacji atakującego (Kali Linux). |
+
+### Wyjaśnienie analityka:
+`mshta.exe` to plik wykonywalny odpowiedzialny za uruchamianie plików `.hta`, które mogą zawierać osadzony kod skryptowy oraz komponenty ActiveX. Ponieważ plik jest natywnie obecny w systemie Windows i podpisany cyfrowo przez Microsoft, analitycy SOC często przeoczają jego nietypowe wywołania sieciowe. Przestępcy chętnie wykorzystują go do pobierania payloadów Stage-2 w pamięci (Memory-only execution), co utrudnia detekcję opartą na plikach dyskowych.
