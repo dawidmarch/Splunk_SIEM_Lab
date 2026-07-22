@@ -26,3 +26,6 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 
 Na stacji Kali Linux wygenerowałem złośliwy payload HTA zawierający kod PowerShell (reverse shell) oraz uruchomiłe lokalny serwer Apache (`apache2`) w celu dystrybucji pliku.
 
+### Krok 2: Konfiguracja nasłuchu
+
+<img width="669" height="539" alt="1" src="https://github.com/user-attachments/assets/e29447ea-0f48-4b52-b5c8-6e89705d72ef" />
