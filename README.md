@@ -46,7 +46,7 @@ Rozwiązywanie problemów: Kluczowym etapem była diagnostyka sieciowa, polegaj�
 
 ## 2. Weryfikacja przepływu danych (Test "Oneshot")
 
-Aby potwierdzić poprawność działania "rury" (pipeline), wykonano test przesyłu pliku testowego `hosts` z systemu Windows do Splunka za pomocą komendy `.\splunk add oneshot`. Pozytywny wynik testu (`Added the following monitor...`) potwierdził drożność komunikacji między stacją roboczą a serwerem SIEM.
+Aby potwierdzić poprawność działania "rury" (pipeline), wykonałem test przesyłu pliku testowego `hosts` z systemu Windows do Splunka za pomocą komendy `.\splunk add oneshot`. Pozytywny wynik testu (`Added the following monitor...`) potwierdził drożność komunikacji między stacją roboczą a serwerem SIEM.
 
 **Komenda weryfikacyjna:**
 
