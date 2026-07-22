@@ -17,3 +17,5 @@ W ramach projektu skonfigurowano odpowiednią telemetrię na stacji roboczej Win
 
 ### Wyjaśnienie analityka:
 `mshta.exe` to plik wykonywalny odpowiedzialny za uruchamianie plików `.hta`, które mogą zawierać osadzony kod skryptowy oraz komponenty ActiveX. Ponieważ plik jest natywnie obecny w systemie Windows i podpisany cyfrowo przez Microsoft, analitycy SOC często przeoczają jego nietypowe wywołania sieciowe. Przestępcy chętnie wykorzystują go do pobierania payloadów Stage-2 w pamięci (Memory-only execution), co utrudnia detekcję opartą na plikach dyskowych.
+
+## 3. Metodologia ataku 
