@@ -14,21 +14,21 @@ Celem projektu jest wdrożenie procedury detekcyjnej dla techniki **Ingress Tool
 ## 3. Metodologia ataku
 
 ### Przygotowanie infrastruktury (Kali Linux)
-Na maszynie atakującej wygenerowano payload przy użyciu `msfvenom` oraz uruchomiono serwer HTTP, aby wystawić plik w sieci lokalnej.
+Na maszynie atakującej wygenerowałem payload przy użyciu `msfvenom` oraz uruchomiłem serwer HTTP, aby wystawić plik w sieci lokalnej.
 
 <img width="683" height="623" alt="2" src="https://github.com/user-attachments/assets/8c2d434a-486b-4264-a7ba-93c95168af56" />
 
 Przygotowanie payloadu (`msfvenom`) oraz uruchomienie serwera HTTP (Python).*
 
 ### Egzekucja ataku (Windows 10)
-Na stacji roboczej Windows 10 wykorzystano narzędzie `certutil.exe` do pobrania złośliwego pliku z serwera Kali. Jest to działanie, które w środowisku produkcyjnym często pozostaje niezauważone, jeśli nie monitoruje się aktywności sieciowej procesów.
+Na stacji roboczej Windows 10 wykorzystałem narzędzie `certutil.exe` do pobrania złośliwego pliku z serwera Kali. Jest to działanie, które w środowisku produkcyjnym często pozostaje niezauważone, jeśli nie monitoruje się aktywności sieciowej procesów.
 
 <img width="855" height="687" alt="1" src="https://github.com/user-attachments/assets/5b1ad00c-9627-487a-85ca-1550b73ca004" />
 
 Wykonanie ataku przy użyciu `certutil.exe`. Widoczne zakończenie sukcesem oraz ścieżka zapisu pliku `C:\Temp\payload.exe`.*
 
 ## 4. Analiza logów (Splunk SIEM)
-W celu detekcji ataku, przeprowadzono analizę logów w systemie Splunk. Zidentyfikowano zdarzenie `EventCode 5156` (Windows Filtering Platform Connection), które jest kluczowym wskaźnikiem (IOC) dla ruchu sieciowego generowanego przez ten proces.
+W celu detekcji ataku, przeprowadziłem analizę logów w systemie Splunk. Zidentyfikowałem zdarzenie `EventCode 5156` (Windows Filtering Platform Connection), które jest kluczowym wskaźnikiem (IOC) dla ruchu sieciowego generowanego przez ten proces.
 
 <img width="843" height="573" alt="3" src="https://github.com/user-attachments/assets/566294a9-d965-4d58-9efd-e0fb0db9b34e" />
 
