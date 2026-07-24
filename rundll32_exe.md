@@ -27,3 +27,6 @@ Aby zarejestrować pełną ścieżkę sieciową oraz argumenty przekazane do pro
 Atakujący na maszynie Kali Linux przygotowuje folder roboczy oraz uruchamia serwer SMB za pomocą pakietu Impacket, udostępniając zasób w sieci lokalnej.
 
 <img width="675" height="533" alt="1" src="https://github.com/user-attachments/assets/0ffa0ccb-837f-46cc-9f97-19debbf36619" />
+
+* **Komenda (Kali Linux):**
+  ```sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py share /tmp/smbFolder -smb2support ``` 
