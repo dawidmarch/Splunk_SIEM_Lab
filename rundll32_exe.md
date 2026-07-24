@@ -64,8 +64,10 @@ Przykładowy JSON z logu Splunka:
 
 ## 5. Wnioski techniczne (Perspektywa analityka SOC)
 
-### 1. Efektywność LOLBins w wektorach sieciowych: Wykorzystanie rundll32.exe do ładowania zasobów z lokalizacji sieciowych UNC pozwala atakującym na ominięcie restrykcji aplikacji, ponieważ plik wykonawczy jest w 100% zaufanym składnikiem systemu Windows.
-### 2. Siła Event ID 4688 bez Sysmona: Choć brak Sysmona ogranicza wgląd w hashe procesów czy szczegółowe zdarzenia sieciowe (Event ID 3), poprawnie skonfigurowany audyt linii poleceń pozwala na natychmiastowe wykrycie obecności adresów IP lub domen zewnętrznych bezpośrednio w parametrach procesów systemowych.
+### 1. Efektywność LOLBins w wektorach sieciowych: 
+Wykorzystanie ```rundll32.exe``` do ładowania zasobów z lokalizacji sieciowych UNC pozwala atakującym na ominięcie restrykcji aplikacji, ponieważ plik wykonawczy jest w 100% zaufanym składnikiem systemu Windows.
+### 2. Siła Event ID 4688 bez Sysmona: 
+Choć brak Sysmona ogranicza wgląd w hashe procesów czy szczegółowe zdarzenia sieciowe (Event ID 3), poprawnie skonfigurowany audyt linii poleceń pozwala na natychmiastowe wykrycie obecności adresów IP lub domen zewnętrznych bezpośrednio w parametrach procesów systemowych.
 ### 3. Rekomendacje hardeningu:
-Blokowanie wychodzącego ruchu SMB (port 445 TCP) z hostów stacji roboczych do sieci zewnętrznej lub niezaufanych podsieci za pomocą Windows Defender Firewall.
-Wdrożenie reguł monitorujących wywołania procesów systemowych (rundll32, regsvr32, mshta) z argumentami zawierającymi ścieżki sieciowe UNC (\\).
+*   Blokowanie wychodzącego ruchu SMB (port 445 TCP) z hostów stacji roboczych do sieci zewnętrznej lub niezaufanych podsieci za pomocą Windows Defender Firewall.
+*   Wdrożenie reguł monitorujących wywołania procesów systemowych (```rundll32, regsvr32, mshta```) z argumentami zawierającymi ścieżki sieciowe UNC (```\\```).
