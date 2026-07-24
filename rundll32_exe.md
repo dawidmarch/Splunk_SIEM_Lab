@@ -4,3 +4,9 @@
 Celem tego projektu laboratoryjnego jest przeprowadzenie, analiza oraz wykrycie zaawansowanego ataku typu **Signed Binary Proxy Execution** z wykorzystaniem zaufanego, cyfrowo podpisanego narzędzia systemowego Windows – **Rundll32.exe** (technika sklasyfikowana w MITRE ATT&CK jako **T1218.011**). 
 
 W scenariuszu zasymulowałem pełny wektor sieciowy (C2 / Attacker Node), w którym stacja robocza ofiary pobiera i próbuje wykonać zasób ze zdalnego serwera kontrolowanego przez napastnika. Projekt został zaprojektowany ze szczególnym naciskiem na **brak agenta Sysmon**. Oznacza to, że cała telemetria opiera się na **natywnych logach systemowych Windows (Windows Security Event Logs – Event ID 4688 z włączonym pełnym audytem linii poleceń)** zebranych i przeanalizowanych w systemie SIEM Splunk.
+
+## 2. MITRE ATT&CK Mapowanie
+
+| Tactic | Technique ID | Technique Name | Data Sources |
+| :--- | :--- | :--- | :--- |
+| **Defense Evasion / Execution** | T1218.011 | Signed Binary Proxy Execution: Rundll32 | Process: Process Creation, Command Line Execution |
