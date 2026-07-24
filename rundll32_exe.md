@@ -20,7 +20,7 @@ Atakujący wykorzystują legalny plik binarny systemu Windows (`rundll32.exe`) d
 Aby zarejestrować pełną ścieżkę sieciową oraz argumenty przekazane do procesu bez obecności Sysmona, musimy upewnić się, że w systemie Windows włączony jest audyt tworzenia procesów.
 
 * **Komenda (PowerShell jako Administrator na Windows 10):**
-  ```powershell
+  ```
   auditpol /set /subcategory:"Process Creation" /success:enable /failure:enable
 
 ### Krok 2: Uruchomienie węzła atakującego na Kali Linux (Serwer SMB)
