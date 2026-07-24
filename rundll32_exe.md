@@ -13,3 +13,8 @@ W scenariuszu zasymulowałem pełny wektor sieciowy (C2 / Attacker Node), w któ
 
 ### Wyjaśnienie taktyczne:
 Atakujący wykorzystują legalny plik binarny systemu Windows (`rundll32.exe`) do załadowania zewnętrznej biblioteki DLL bezpośrednio z zasobu sieciowego (np. protokół SMB udostępniony przez maszynę Kali Linux). Ponieważ `rundll32.exe` jest podpisany cyfrowo przez Microsoft, mechanizmy oparte na reputacji plików zazwyczaj nie blokują jego uruchomienia. Pozwala to na ominięcie restrykcji kontroli aplikacji oraz ukrycie złośliwej aktywności pod płaszczykiem standardowego ruchu operacyjnego.
+
+
+
+### Krok 1: Przygotowanie środowiska Windows (Audyt linii poleceń)
+Aby zarejestrować pełną ścieżkę sieciową oraz argumenty przekazane do procesu bez obecności Sysmona, musimy upewnić się, że w systemie Windows włączony jest audyt tworzenia procesów.
