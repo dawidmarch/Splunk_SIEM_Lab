@@ -18,3 +18,7 @@ Atakujący wykorzystują legalny plik binarny systemu Windows (`rundll32.exe`) d
 
 ### Krok 1: Przygotowanie środowiska Windows (Audyt linii poleceń)
 Aby zarejestrować pełną ścieżkę sieciową oraz argumenty przekazane do procesu bez obecności Sysmona, musimy upewnić się, że w systemie Windows włączony jest audyt tworzenia procesów.
+
+* **Komenda (PowerShell jako Administrator na Windows 10):**
+  ```powershell
+  auditpol /set /subcategory:"Process Creation" /success:enable /failure:enable
