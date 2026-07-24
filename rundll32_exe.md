@@ -10,3 +10,6 @@ W scenariuszu zasymulowałem pełny wektor sieciowy (C2 / Attacker Node), w któ
 | Tactic | Technique ID | Technique Name | Data Sources |
 | :--- | :--- | :--- | :--- |
 | **Defense Evasion / Execution** | T1218.011 | Signed Binary Proxy Execution: Rundll32 | Process: Process Creation, Command Line Execution |
+
+### Wyjaśnienie taktyczne:
+Atakujący wykorzystują legalny plik binarny systemu Windows (`rundll32.exe`) do załadowania zewnętrznej biblioteki DLL bezpośrednio z zasobu sieciowego (np. protokół SMB udostępniony przez maszynę Kali Linux). Ponieważ `rundll32.exe` jest podpisany cyfrowo przez Microsoft, mechanizmy oparte na reputacji plików zazwyczaj nie blokują jego uruchomienia. Pozwala to na ominięcie restrykcji kontroli aplikacji oraz ukrycie złośliwej aktywności pod płaszczykiem standardowego ruchu operacyjnego.
